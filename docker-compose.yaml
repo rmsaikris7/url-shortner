@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres
+    container_name: db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=shorturl
+    ports:
+      - "5432:5432"
+    networks:
+      - db-net
+  redis:
+    image: "redis/redis-stack"
+    container_name: "redis-stack"
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data:/data
+    entrypoint: >
+      redis-server
+        --appendonly no
+        --protected-mode no
+        --maxmemory 500mb
+        --maxmemory-policy allkeys-lfu
+    networks:
+      - redis-app-net
+networks:
+  db-net:
+    driver: bridge
+  redis-app-net:
+    driver: bridge
