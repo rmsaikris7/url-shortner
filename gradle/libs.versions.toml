@@ -1,0 +1,36 @@
+[versions]
+springBoot = "3.3.5"
+dependencyManagement = "1.1.6"
+mapstruct = "1.6.0"
+jakartaValidation = "3.1.0"
+commonsCodec = "1.17.1"
+hibernateValidator = "8.0.0.Final"
+dbScheduler = "15.0.0"
+restAssured = "5.5.0"
+springdoc = "2.5.0"
+spotless = "2.43.0"
+spotlessPlugin = "6.25.0"
+
+
+[libraries]
+springBootStarterDataJpa = { group = "org.springframework.boot", name = "spring-boot-starter-data-jpa" }
+springBootStarterDataRedis = { group = "org.springframework.boot", name = "spring-boot-starter-data-redis" }
+springBootStarterWeb = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
+mapstructProcessor = { group = "org.mapstruct", name = "mapstruct-processor", version.ref = "mapstruct" }
+flywayCore = { group = "org.flywaydb", name = "flyway-core" }
+flywayDatabasePostgresql = { group = "org.flywaydb", name = "flyway-database-postgresql" }
+jakartaValidationApi = { group = "jakarta.validation", name = "jakarta.validation-api", version.ref = "jakartaValidation" }
+commonsCodec = { group = "commons-codec", name = "commons-codec", version.ref = "commonsCodec" }
+mapstruct = { group = "org.mapstruct", name = "mapstruct", version.ref = "mapstruct" }
+hibernateValidator = { group = "org.hibernate", name = "hibernate-validator", version.ref = "hibernateValidator" }
+dbSchedulerSpringBootStarter = { group = "com.github.kagkarlsson", name = "db-scheduler-spring-boot-starter", version.ref = "dbScheduler" }
+postgresql = { group = "org.postgresql", name = "postgresql" }
+springBootStarterTest = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
+testcontainersJunitJupiter = { group = "org.testcontainers", name = "junit-jupiter" }
+testcontainersPostgresql = { group = "org.testcontainers", name = "postgresql" }
+restAssured = { group = "io.rest-assured", name = "rest-assured", version.ref = "restAssured" }
+junitPlatformLauncher = { group = "org.junit.platform", name = "junit-platform-launcher" }
+springdocWebmvcUI = { group = "org.springdoc", name = "springdoc-openapi-starter-webmvc-ui", version.ref = "springdoc"}
+spotlessLib = { group = "com.diffplug.spotless", name = "spotless-lib", version.ref = "spotless" }
+spotlessPluginGradle = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotlessPlugin" }
+
