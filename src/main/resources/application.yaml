@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: URLShortner
+  datasource:
+    read:
+      url: jdbc:postgresql://localhost:5432/shorturl
+      username: postgres
+      password: password
+    write:
+      url: jdbc:postgresql://localhost:5432/shorturl
+      username: postgres
+      password: password
