@@ -17,3 +17,8 @@ spring:
     port: 6379
     cache:
       type: redis
+logging:
+  level:
+    root: WARN
+    org.springframework.web: DEBUG
+    com.dkb.UrlShortner: WARN
